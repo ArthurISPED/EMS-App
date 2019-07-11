@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+  		<ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+  	</ion-buttons>
+    <ion-title>Patient</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+    
+<ion-content >
+	<ion-fab  vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button *ngIf="changes" (click)="validate()" color="success">
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <canvas class="myCanvas" #myCanvas (touchstart)="handleStart($event)" (touchmove)="handleMove($event)"></canvas>
+</ion-content>
+

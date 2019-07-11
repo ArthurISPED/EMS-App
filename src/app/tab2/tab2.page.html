@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Menu
+    </ion-title>
+    <ion-icon slot="end" name="more" size="large"></ion-icon>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-grid fixed >
+		<ion-row >
+			<ion-col >
+				<ion-button  fill="solid" class="tile top"  size="large"  expand="block" (click)="openForms()" >
+					<ion-icon slot="start" name="clipboard"></ion-icon>
+					Forms
+				</ion-button>
+				
+			</ion-col>
+			<ion-col>
+				<ion-button fill="clear" class="tile top"  size="large"  expand="block" (click)="openMissions()">
+					<ion-icon slot="start" name="medkit"></ion-icon>
+					Missions
+				</ion-button>
+				
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<ion-button  fill="clear" class="tile bottom"  size="large"  expand="block" (click)="openPatients()">
+					<ion-icon slot="start" name="people"></ion-icon>
+					Patients
+				</ion-button>
+				
+			</ion-col>
+			<ion-col>
+				<ion-button  fill="solid" class="tile bottom"  size="large"  expand="block" (click)="openTeams()">
+					<ion-icon slot="start" name="medical"></ion-icon>
+					Teams
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

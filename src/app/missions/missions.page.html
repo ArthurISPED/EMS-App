@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+  	
+    <ion-title>Missions</ion-title>
+    <ion-button size ="small" shape="round" slot="end" fill="clear" color="dark" (click)="openChat()">
+    <ion-icon  name="chatbubbles" size="large"></ion-icon>
+    <ion-badge>2</ion-badge>
+    </ion-button>
+    <ion-button size ="small" shape="round" slot="end" fill="clear" color="dark" (click)="presentPopover()">
+    <ion-icon  name="notifications" size="large"></ion-icon>
+    <ion-badge>24</ion-badge>
+  </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-col margin="30%">
+
+		<div><br><br><br><br><br></div>
+		
+		<ion-button  size="large" expand="block" height="100%">
+			<ion-icon name="arrow-dropright-circle" slot="start"></ion-icon>
+			Ongoing
+		</ion-button>
+	
+
+		
+		<ion-button size="large" expand="block" height="25%" >
+			<ion-icon name="cart" slot="start"></ion-icon>
+			Available
+		</ion-button>
+	
+
+		
+		<ion-button size="large" expand="block" height="25%">
+			<ion-icon name="person" slot="start"></ion-icon>
+			My tasks
+		</ion-button>
+	
+
+		
+		<ion-button size="large" expand="block" height="25%" >
+			<ion-icon name="checkmark-circle" slot="start"></ion-icon>
+			Completed
+		</ion-button>
+	
+	</ion-col>
+
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+  		<ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+  	</ion-buttons>
+    <ion-title>New form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+	<form margin-top="5%">
+		<ion-item border-bottom="none">
+			<h4>Description</h4>
+		</ion-item>
+		<ion-item margin-top="5%">
+			<ion-label>Title</ion-label>
+			<ion-input required slot ="end" value="Form 1" clearInput placeholder="Enter form title"></ion-input>
+		</ion-item>
+	<ion-item margin-top="5%">
+    <ion-label>Gender</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="f">Female</ion-select-option>
+      <ion-select-option value="m">Male</ion-select-option>
+      <ion-select-option value="o">Other</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item margin-top="5%">
+  	<ion-label>Conscious</ion-label>
+  <ion-toggle ng-checked="true" (click)="checked()"></ion-toggle>
+</ion-item>
+<ion-item *ngIf="toggleChecked">
+	<ion-label *ngIf="toggleChecked">Name</ion-label>
+	<ion-input *ngIf="toggleChecked" slot="end" value ="Default 1" clearInput placeholder="Enter name"></ion-input>
+</ion-item>
+<ion-item *ngIf="toggleChecked">
+	<ion-label *ngIf="toggleChecked">Age</ion-label>
+	<ion-input type="number" *ngIf="toggleChecked" slot="end" value ="20" clearInput placeholder="Enter age"></ion-input>
+</ion-item>
+<ion-item margin-top="10%">
+<h4>Comments</h4>
+</ion-item>
+<ion-item >
+<ion-textarea placeholder="Enter comments here"> </ion-textarea>
+</ion-item>
+
+	<ion-button margin="auto"  center expand="block"  color="dark" size="large" (click)="photo()" >
+		<ion-icon slot ="icon-only" name="camera" size="large"></ion-icon>
+	</ion-button>
+	<ion-button  id ="buttontext"  expand="full" (click)="confirm()" color="primary">
+		
+	<p>Submit</p>
+	</ion-button>
+
+</form>
+</ion-content>
