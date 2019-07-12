@@ -15,6 +15,8 @@ const routes: Routes = [
   { path: 'photo', loadChildren: './photo/photo.module#PhotoPageModule' },
   { path: 'missiondetails', loadChildren: './missiondetails/missiondetails.module#MissiondetailsPageModule' },
   { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' },
+  { path: 'team', loadChildren: './team/team.module#TeamPageModule' },
+  
 ];
 @NgModule({
   imports: [

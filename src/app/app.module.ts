@@ -20,17 +20,30 @@ import { File } from '@ionic-native/File/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 import { IonicStorageModule } from '@ionic/storage';
+
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 
 
 @NgModule({
   declarations: [AppComponent, PopoverComponent],
   entryComponents: [PopoverComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, IonicStorageModule.forRoot()],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, IonicStorageModule.forRoot(), AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AutosizeModule, Camera, File, WebView, FilePath
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    AutosizeModule,
+    Camera, 
+    File, 
+    WebView, 
+    FilePath, 
+    { provide: FirestoreSettingsToken, useValue: {} }
   ],
   bootstrap: [AppComponent]
 })
